@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dudulab" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1dP-Sk-OyN">
+                                <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tFA-QV-5WO" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="430" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="03P-64-dHU"/>
+                                    <constraint firstAttribute="height" constant="50" id="1Cj-I9-Cb2"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="MEF-LC-NkN"/>
+                                    <constraint firstAttribute="width" constant="320" id="ktX-tv-iam"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="320" id="tAe-Yq-tev"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="wnJ-Od-cqV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1dP-Sk-OyN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DFB-iY-0TZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1dP-Sk-OyN" secondAttribute="bottom" id="HC8-tu-jRh"/>
+                            <constraint firstAttribute="trailing" secondItem="1dP-Sk-OyN" secondAttribute="trailing" id="WMv-FE-P5S"/>
+                            <constraint firstAttribute="trailing" secondItem="1dP-Sk-OyN" secondAttribute="trailing" id="ZEL-D7-iEX"/>
+                            <constraint firstItem="1dP-Sk-OyN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iCC-A8-4ta"/>
+                            <constraint firstItem="1dP-Sk-OyN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="kvP-GE-waK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tFA-QV-5WO" secondAttribute="bottom" id="oIa-TB-Y5k"/>
+                            <constraint firstAttribute="bottom" secondItem="tFA-QV-5WO" secondAttribute="bottom" id="pPM-eB-qeh"/>
+                            <constraint firstItem="1dP-Sk-OyN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qJX-IJ-QQx"/>
+                            <constraint firstItem="tFA-QV-5WO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="thC-x8-w7t"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="banner" destination="tFA-QV-5WO" id="1Me-uA-SzX"/>
+                        <outlet property="mywebView" destination="1dP-Sk-OyN" id="7oJ-Su-sr5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129.375" y="132.5"/>
+        </scene>
+    </scenes>
+</document>
